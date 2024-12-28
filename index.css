@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #27292c;
+    color: white;
+    margin: 0;
+    /* text-align: center; */
+}
+
+h1 {
+    margin-top: 40px;
+}
+
+/* Тк nav это - родитель (в фвйле Navbar он идет первым, то мы создаем 
+flex контейнер в кторый ппомещаем фото и span) */
+
+
+header{
+    height: 90px;
+    background-color: #21222A;
+    padding: 30px 25px;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+
+nav > img {
+    width: 40px;
+    margin-right: 7px;
+}
+nav > span {
+    color: #61dafb;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+main{
+    padding: 60px 30px;
+    background-image: url(images/react-logo-half.png);
+    background-size: 15%;
+    background-repeat: no-repeat;
+    background-position: right 70%;
+    /* background-attachment: fixed; */
+   
+}
+
+main > h1 {
+    margin: 0;
+    font-size: 2.4rem;
+}
+
+.facts-list{
+    margin-top: 46px;
+    max-width: 400px;
+}
+
+.facts-list > li {
+    margin-block: 10px;
+    line-height: 19px;
+}
+
+.facts-list > li::marker{
+    color: #61dafb;
+    font-size: 1.5rem;
+}
+
+
+/* Адаптивные стили *//* Медиазапрос для планшетов */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 20px 15px;
+    }
+    
+    main {
+        padding: 50px 20px;
+        background-size: 15%; /* Уменьшаем размер фона до 75% от ширины контейнера */
+        background-position: right 95%; /* Перемещаем немного выше */
+    }
+    
+    main > h1 {
+        font-size: 2rem;
+    }
+    
+    .facts-list {
+        margin-top: 36px;
+        max-width: 350px;
+    }
+}
+
+/* Медиазапрос для смартфонов */
+@media screen and (max-width: 480px) {
+    header {
+        padding: 15px 10px;
+    }
+    
+    nav > img {
+        width: 35px;
+    }
+    
+    nav > span {
+        font-size: 1.3rem;
+    }
+    
+    main {
+        padding: 45px 15px;
+        background-size: 15%; /* Еще больше уменьшаем размер фона */
+        background-position: right 98%; /* Немного смещаем вверх */
+    }
+    
+    main > h1 {
+        font-size: 1.8rem;
+    }
+    
+    .facts-list {
+        margin-top: 26px;
+        max-width: 300px;
+    }
+    
+    .facts-list > li {
+        line-height: 17px;
+    }
+    
+    .facts-list > li::marker{
+        font-size: 1.3rem;
+    }
+}
